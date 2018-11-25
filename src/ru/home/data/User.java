@@ -7,11 +7,13 @@ import java.util.Date;
 public class User {
     private final int id;
     private final String name;
+    private final String telephone;
     private final Date birthDay;
 
-    public User(int id, String name, Date birthDay) {
+    public User(int id, String name, String telephone, Date birthDay) {
         this.id = id;
         this.name = name;
+        this.telephone = telephone;
         this.birthDay = birthDay;
     }
 
@@ -25,6 +27,10 @@ public class User {
 
     public Date getBirthDay() {
         return birthDay;
+    }
+
+    public String getTelephone() {
+        return telephone;
     }
 
     @Override
