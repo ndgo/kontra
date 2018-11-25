@@ -13,10 +13,10 @@ public class UserManager {
 
     public UserManager() {
 
-        Date current = new Date();
+        Date current = DateUtil.currentDate();
 
         save("Whistler", "8-800-555-353-35", DateUtil.rollDays(current, -1));
-        save("Jackson Hole", "129-24-30", DateUtil.rollDays(current, -2));
+        save("Jackson Hole", "129-24-30", DateUtil.rollDays(current, -1));
         save("Snowbird", "8-916-42-36-771", DateUtil.rollDays(current, -3));
         save("Telluride", "8-910-584-16-36", DateUtil.rollDays(current, -4));
         save("Taos", "8-910-421-04-50", DateUtil.rollDays(current, -5));
@@ -53,7 +53,7 @@ public class UserManager {
         List<User> result = new LinkedList<>();
 
         for (User user : users) {
-            if (user.getName().equals(telephone)) {
+            if (user.getTelephone().equals(telephone)) {
                 result.add(user);
             }
         }

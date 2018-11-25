@@ -89,6 +89,23 @@ public class Main {
                     }
                     break;
                 }
+                case 5: {
+                    System.out.println("Введите имя чтобы выполнить поиск по телефону:");
+                    String telephone = scanner.nextLine();
+
+                    List<User> users = userManager.searchByTelephone(telephone);
+
+                    if (users.isEmpty()) {
+                        System.out.println("Ни один пользователь с телефоном " + telephone + " не найден");
+                        break;
+                    }
+
+                    for (User user : users) {
+                        System.out.println(user);
+
+                    }
+                    break;
+                }
                 case 6: {
                     System.out.println("Вывод на экран");
                     for (User user : userManager.getAll()) {

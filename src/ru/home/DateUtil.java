@@ -8,6 +8,16 @@ import java.util.Date;
 
 public class DateUtil {
 
+    public static Date currentDate() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTime();
+    }
+
     // функция прибавления/удаления количества дней (параметр days) у даты из параметра date
     public static Date rollDays(Date date, int days) {
         return roll(date, Calendar.DAY_OF_YEAR, days);
