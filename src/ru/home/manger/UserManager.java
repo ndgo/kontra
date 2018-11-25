@@ -1,4 +1,4 @@
-package manger;
+package ru.home.manger;
 
 import ru.home.data.User;
 import ru.home.util.DateUtil;
