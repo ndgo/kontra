@@ -1,7 +1,6 @@
 package manger;
 
 import ru.home.data.User;
-import ru.home.manger.IUserManager;
 import ru.home.util.DateUtil;
 
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class UserManagerImpl implements IUserManager {
+public class UserManagerImpl {
 
     private final AtomicInteger idGenerator = new AtomicInteger();
     private final List<User> users = new ArrayList<>();
@@ -32,19 +31,19 @@ public class UserManagerImpl implements IUserManager {
         save("Sun Valley", DateUtil.rollDays(current, -11));
     }
 
-    @Override
+
     public User save(String name, Date birthDay) {
         User user = new User(idGenerator.getAndIncrement(), name, birthDay);
         users.add(user);
         return user;
     }
 
-    @Override
+
     public List<User> getAll() {
         return users;
     }
 
-    @Override
+
     public List<User> searchByName(String name) {
         List<User> result = new ArrayList<>();
 
@@ -57,7 +56,7 @@ public class UserManagerImpl implements IUserManager {
         return result;
     }
 
-    @Override
+
     public List<User> searchByDate(Date moment) {
         List<User> result = new ArrayList<>();
 
@@ -70,7 +69,7 @@ public class UserManagerImpl implements IUserManager {
         return result;
     }
 
-    @Override
+
     public void delete(int id) {
         for (User user : users) {
             if (user.getId() == id) {
