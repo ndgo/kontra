@@ -1,7 +1,7 @@
 package ru.home;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class UserManager {
 
     private final AtomicInteger idGenerator = new AtomicInteger();
-    private final List<User> users = new ArrayList<>();
+    private final List<User> users = new LinkedList<>();
 
     public UserManager() {
 
@@ -37,7 +37,7 @@ public class UserManager {
 
 
     public List<User> searchByName(String name) {
-        List<User> result = new ArrayList<>();
+        List<User> result = new LinkedList<>();
 
         for (User user : users) {
             if (user.getName().equals(name)) {
@@ -50,7 +50,7 @@ public class UserManager {
 
 
     public List<User> searchByTelephone(String telephone) {
-        List<User> result = new ArrayList<>();
+        List<User> result = new LinkedList<>();
 
         for (User user : users) {
             if (user.getName().equals(telephone)) {
@@ -63,7 +63,7 @@ public class UserManager {
 
 
     public List<User> searchByDate(Date moment) {
-        List<User> result = new ArrayList<>();
+        List<User> result = new LinkedList<>();
 
         for (User user : users) {
             if (Objects.equals(user.getBirthDay(), moment)) {

@@ -31,7 +31,7 @@ public class DateUtil {
     // преобразовать строку в формате ДД.ММ.ГГГГ к дате
     public static Date toDate(String birthDay) throws ParseException {
         SimpleDateFormat dateFormat = dateFormat();
-        return ( dateFormat).parse(birthDay);
+        return dateFormat.parse(birthDay);
     }
 
     // преобразовать текущую дату к строке формата ДД.ММ.ГГГГ

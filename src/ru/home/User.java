@@ -48,6 +48,9 @@ public class User {
 
     @Override
     public String toString() {
-        return name + ", " + DateUtil.toString(birthDay);
+        return "ID:" + id + ", " +
+                "ИМЯ: " + name + ", " +
+                "ТЕЛЕФОН:" + telephone + ", " +
+                "ДАТА:" + DateUtil.toString(birthDay);
     }
 }
