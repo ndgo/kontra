@@ -1,4 +1,4 @@
-package ru.home.util;
+package ru.home;
 
 import java.text.Format;
 import java.text.ParseException;

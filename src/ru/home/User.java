@@ -1,6 +1,4 @@
-package ru.home.data;
-
-import ru.home.util.DateUtil;
+package ru.home;
 
 import java.util.Date;
 

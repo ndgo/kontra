@@ -1,7 +1,4 @@
-package ru.home.manger;
-
-import ru.home.data.User;
-import ru.home.util.DateUtil;
+package ru.home;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,6 +41,19 @@ public class UserManager {
 
         for (User user : users) {
             if (user.getName().equals(name)) {
+                result.add(user);
+            }
+        }
+
+        return result;
+    }
+
+
+    public List<User> searchByTelephone(String telephone) {
+        List<User> result = new ArrayList<>();
+
+        for (User user : users) {
+            if (user.getName().equals(telephone)) {
                 result.add(user);
             }
         }
