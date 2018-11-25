@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class UserManagerImpl {
+public class UserManager {
 
     private final AtomicInteger idGenerator = new AtomicInteger();
     private final List<User> users = new ArrayList<>();
 
-    public UserManagerImpl() {
+    public UserManager() {
 
         Date current = new Date();
 
